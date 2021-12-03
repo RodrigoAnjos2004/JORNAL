@@ -1,0 +1,158 @@
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 50px;
+  font-family: "Roboto", sans-serif;
+  color: #615F5E;
+  scroll-padding-top: 20px;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.body-container {
+  width: 1000px;
+  margin: auto;
+  min-height: 200px;
+}
+
+.dashboard {
+  width: 100%;
+}
+.dashboard h2 {
+  color: #363B6D;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+.dashboard h5 {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  z-index: 1;
+  color: #363B6D;
+  opacity: 0.5;
+  font-size: 15px;
+  margin-bottom: 0 !important;
+}
+.dashboard h5.online {
+  color: #72C17C;
+  opacity: 1;
+}
+.dashboard .dashboard-container {
+  height: 920px;
+  width: 900px;
+  background-color: white;
+}
+
+.dashboard .grid-container .grid-area {
+  background-color: rgb(255, 249, 249);
+  margin-bottom: 20px;
+  border-radius: 0.95rem;
+  overflow: hidden;
+}
+.dashboard .grid-container .profile {
+  grid-area: profile;
+}
+.dashboard .grid-container .profile .img {
+  position: relative;
+  overflow: hidden;
+  height: 420px;
+}
+.dashboard .grid-container .profile .img i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+.dashboard .grid-container .profile .img h3 {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: #E83114;
+  z-index: 1;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  cursor: default;
+}
+
+.dashboard .grid-container .profile .img .button:hover {
+  bottom: 5px;
+  box-shadow: 0px 2px 12px -4px rgb(255, 255, 255);
+}
+
+.dashboard .grid-container .profile .img img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.dashboard .grid-container .profile .profile-data {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.dashboard .grid-container .profile .profile-data .data-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 55px;
+}
+.dashboard .grid-container .profile .profile-data .data-details h5 {
+  position: initial;
+}
+.dashboard .grid-container .profile .profile-data .data-details h4 {
+  color: #363B6D;
+  font-weight: normal;
+}
+button{
+    display: flex;
+    align-items: center;
+    padding: 0 500px;
+    border: none;
+}
+button:hover{
+  background-color: #615F5E;  
+  padding-bottom: 5px;  
+}
+
+@media screen and (max-width: 1000px) {
+  .body-container {
+    width: 100%;
+    padding: 50px 10px 0 10px;
+  }
+
+  .dashboard .grid-container {
+    grid-gap: 0 10px;
+  }
+  .dashboard .grid-container .grid-area {
+    margin-bottom: 10px;
+  }
+  .dashboard .grid-container .edit-profile .header h1 {
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+}
+@media screen and (max-width: 750px) {
+  .dashboard .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard .grid-container .profile {
+    height: 532px;
+  }
+
+  .dashboard .grid-container .profile .img:before {
+    width: 200%;
+    top: 50%;
+    height: 50%;
+  }
+}
